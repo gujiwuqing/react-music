@@ -4,15 +4,31 @@
     "dev": "umi dev",
     "build": "umi build",
     "postinstall": "umi setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "lint": "umi lint --fix"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "umi": "^4.0.2"
   },
   "devDependencies": {
+    "@types/node": "^18.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "typescript": "^4.1.2"
+    "@umijs/lint": "^4.0.4",
+    "eslint": "^8.18.0",
+    "postcss": ">=8.4.6 <9.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-refresh": ">=0.10.0 <1.0.0",
+    "rollup": "^2.0.0",
+    "stylelint": "^14.9.1",
+    "typescript": "^4.1.2",
+    "webpack": ">=5.0.0 <6.0.0",
+    "prettier": "^2",
+    "prettier-plugin-organize-imports": "^2",
+    "prettier-plugin-packagejson": "^2",
+    "@umijs/plugins": "^4.0.2",
+    "tailwindcss": "^3"
   }
 }
