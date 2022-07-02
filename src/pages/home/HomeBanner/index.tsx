@@ -1,22 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import {GET_BANNER_LIST} from '@/service/home';
 import type {BannerItemDTO} from '@/pages/home/HomeBanner/index.DTO';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Autoplay,Pagination} from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const HomeBanner = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
   const [list, setList] = useState<BannerItemDTO[]>([]);
   const getBannerList = async () => {
     const {banners} = await GET_BANNER_LIST();
-    setList([...banners])
+    setList([...banners]);
   };
 
   useEffect(() => {
@@ -24,15 +20,23 @@ const HomeBanner = () => {
   }, []);
   return (
     <div>
-      <Slider {...settings}>
+      <Swiper
+        modules={[Autoplay,Pagination]}
+        autoplay
+        pagination={{ clickable: true }}
+        spaceBetween={20}
+        slidesPerView={3}
+      >
         {
           list.map(item => {
             return (
-              <img src={item.imageUrl} alt="" key={item.id}/>
+              <SwiperSlide>
+                <img src={item.imageUrl} alt="" key={item.id} style={{margin: '0 10px', padding: '2%'}}/>
+              </SwiperSlide>
             );
           })
         }
-      </Slider>
+      </Swiper>
     </div>
   );
 };

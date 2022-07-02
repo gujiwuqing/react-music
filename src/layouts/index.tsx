@@ -1,12 +1,10 @@
 import { Link, Outlet } from 'umi';
 import styles from './index.less';
+import 'antd/dist/antd.less';
 
 export default function Layout() {
   return (
-    <div className='bg-black'>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <div className='container mx-auto'>
       <div className={styles.navs}>
         <ul>
           <li>
