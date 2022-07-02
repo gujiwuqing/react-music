@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {GET_BANNER_LIST} from '@/service/home';
-import type {BannerItemDTO} from '@/pages/home/HomeBanner/index.DTO';
+import type {BannerItemDTO} from '@/service/home/index.DTO';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay,Pagination} from 'swiper';
 
