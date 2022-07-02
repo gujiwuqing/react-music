@@ -1,12 +1,9 @@
 import React from "react";
-
+import HomeBanner from '@/pages/home/HomeBanner';
 export default function HomePage() {
   return (
     <div>
-      <h2>Yay! Welcome to umi!</h2>
-      <p>
-        To get started, edit <code>pages/index.tsx</code> and save to reload.
-      </p>
+     <HomeBanner/>
     </div>
   );
 }
