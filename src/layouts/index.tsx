@@ -4,7 +4,7 @@ import 'antd/dist/antd.less';
 
 export default function Layout() {
   return (
-    <div className='container mx-auto'>
+    <div className={`${styles.container} mx-auto`}>
       <div className={styles.navs}>
         <ul>
           <li>

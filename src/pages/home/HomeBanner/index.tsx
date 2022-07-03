@@ -26,6 +26,7 @@ const HomeBanner = () => {
         pagination={{ clickable: true }}
         spaceBetween={20}
         slidesPerView={3}
+        className='pb-6'
       >
         {
           list.map(item => {
