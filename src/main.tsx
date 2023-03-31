@@ -7,7 +7,7 @@ import {
   Link,
 } from "react-router-dom";
 import Home from "./pages/home";
-import "./index.css";
+import "./index.less";
 const router = createBrowserRouter([
   {
     path: "/",
