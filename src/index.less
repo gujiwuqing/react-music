@@ -1,7 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body,html{
+body,
+html {
   margin: 0;
   padding: 0;
+}
+
+.overflow-line {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.active{
+  color:#fa2800;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background: #fa2800;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: 0 auto;
+    opacity: 1;
+}
 }
