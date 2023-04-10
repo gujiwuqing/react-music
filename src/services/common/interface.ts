@@ -31,3 +31,8 @@ export interface PlayListVO {
   limit: number;
   offset: number;
 }
+
+export interface ArtistVO {
+  limit: number;
+  offset: number;
+}

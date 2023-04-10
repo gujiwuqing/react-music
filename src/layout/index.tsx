@@ -1,3 +1,4 @@
+import PlayBar from "@/components/PlayBar";
 import React, { ReactElement } from "react";
 import { NavLink } from "react-router-dom";
 interface LayoutProps {
@@ -21,6 +22,7 @@ export default function Layout(props: LayoutProps) {
         </ul>
       </nav>
       <div>{props?.children}</div>
+      <PlayBar />
     </div>
   );
 }

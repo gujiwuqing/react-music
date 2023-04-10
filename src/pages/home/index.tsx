@@ -3,7 +3,8 @@ import { useRequest } from "ahooks";
 import { getBannerList, getPersonalized } from "@/services/common";
 import HomeBanner from "./components/HomeBanner";
 import Layout from "@/layout";
-import PlayList from "@/components/PlayList";
+import HomePlayList from "./components/HomePlayList";
+import HomeSinger from "./components/HomeSinger";
 export default function Home() {
   const { loading, run, data } = useRequest(getBannerList, {
     manual: true,
@@ -21,7 +22,8 @@ export default function Home() {
     <Layout>
       <div>
         <HomeBanner banners={data?.banners || []} />
-        <PlayList result={playListData?.result || []} />
+        <HomePlayList result={playListData?.result || []} />
+        <HomeSinger />
       </div>
     </Layout>
   );

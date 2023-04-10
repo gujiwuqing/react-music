@@ -1,7 +1,7 @@
 // 创建实例时配置默认值
 import axios from "axios";
 const request = axios.create({
-  baseURL: "https://netease-cloud-music-api-plum-iota.vercel.app",
+  baseURL: "http://81.68.168.90:4000",
   timeout: 10000,
 });
 
