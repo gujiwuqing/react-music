@@ -1,24 +1,12 @@
-import React, { useEffect } from "react";
-import Layout from "@/layout";
-import { useRequest } from "ahooks";
-import { getPlayListDetail } from "@/services/common";
-import { Col, Row } from "antd";
-import { useParams } from "react-router-dom";
-import DetailContent from "./components/DetailContent";
-import "./index.less";
-export default function detail() {
-  let { id } = useParams();
-  const { run, data, loading } = useRequest(getPlayListDetail, {
-    manual: true,
-  });
+import React from 'react';
+import Layout from '@/layout';
+import {Col, Row} from 'antd';
+import {useLoaderData} from 'react-router-dom';
+import DetailContent from './components/DetailContent';
+import './index.less';
 
-  useEffect(() => {
-    run({
-      id,
-      s: 100,
-      timestamp: 1681097388590,
-    });
-  }, []);
+export default function detail() {
+  const data = useLoaderData();
   return (
     <Layout>
       <div className="playlist-detail">

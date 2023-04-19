@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
-import { useRequest } from "ahooks";
-import { getPlayList } from "@/services/common";
-import PlayList from "@/components/PlayList";
-import Layout from "@/layout";
-export default function PlayListPage() {
-  const { loading, run, data } = useRequest(getPlayList, {
-    manual: true,
-  });
+import React from 'react';
+import PlayList from '@/components/PlayList';
+import Layout from '@/layout';
+import {useLoaderData} from 'react-router-dom';
 
-  useEffect(() => {
-    run({ order: "hot", cat: "全部", limit: 40, offset: 0 });
-  }, []);
+export default function PlayListPage() {
+  const data = useLoaderData();
   return (
     <Layout>
       <div>
